@@ -14,5 +14,5 @@ COPY . .
 # Cloud Run 포트 환경변수 설정 (기본값 8080)
 ENV PORT 8080
 
-# Production용 WSGI 서버인 Gunicorn으로 실행
-CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 --timeout 0 app:app
+# Production용 WSGI 서버인 Gunicorn으로 실행 (main.py의 app 객체 실행)
+CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 --timeout 0 main:app
