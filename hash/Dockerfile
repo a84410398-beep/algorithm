@@ -15,4 +15,4 @@ COPY . .
 ENV PORT=8080
 
 # Gunicorn을 사용하여 Flask 앱 실행
-CMD ["gunicorn", "--bind", "0.0.0.0:8080", "app:app"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8080", "main:app"]
